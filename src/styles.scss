@@ -1,0 +1,168 @@
+@use "sass:math";
+
+// ############################################
+// ################ Font stuff ################
+// ############################################
+
+@font-face {
+    font-family: 'Minnie';
+    src: url('./components/fonts/Minnie.TTF');
+}
+
+@font-face {
+    font-family: 'Impress';
+    src: url('./components/fonts/impress-bt.ttf');
+}
+
+@mixin Minnie {
+    font-family: 'Minnie';
+}
+
+
+// ############################################
+// ############### Shadow Stuff ###############
+// ############################################
+
+
+@function outline($color, $shadow-width, $x-shift: 0, $y-shift: 0, $probe-count: 36) {
+  $shadows: ();
+  @for $i from 1 through $probe-count {
+    $angle: $i * 360deg / $probe-count;
+    $offset-x: math.sin($angle) * $shadow-width + $x-shift;
+    $offset-y: math.cos($angle) * $shadow-width + $y-shift;
+    $shadows-append: #{$offset-x} #{$offset-y} 1px #{$color};
+    $shadows: append($shadows, $shadows-append, comma);
+  }
+  @return $shadows;
+}
+
+@mixin FontShadow {
+    text-shadow: append(outline(black, 3px, 0, 2px), outline(white, 6px, 0, 2px), comma);
+}
+
+
+
+// ############################################
+// ############ Placeholder stuff #############
+// ############################################
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0; 
+    margin: 0; 
+}
+
+img, picture, svg, video {
+    display: block; 
+    max-width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background: url('./components/pages/img/Wallpaper_Test_2_32523.jpg');
+    // filter: brightness(50%);
+}
+
+$starcolor: #f7e1a8;
+$fontcolor: #edc36e;
+$contrastcolor: #ea8e93;
+$blue: #3a4387;
+$darkblue: #1b254b;
+$darkerblue: #131212;
+
+
+
+
+.App {
+
+}
+
+
+
+@media (min-width: 40em) {}
+@media (min-width: 60em) {}
+@media (min-width: 80em) {
+    header {
+        max-width: 100%;
+        position: relative;
+
+        .site-logo {
+            width: 300px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+
+            nav {
+                width: 100%;
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 2px;
+                // background: url('./components/pages/img/Header-clouds.png') no-repeat;
+                @include Minnie();
+                @include FontShadow;
+        
+                   
+                a {
+                    position: relative;
+                    z-index: 2;
+                    display: block;
+                    padding: 10px;
+                    text-decoration: none;
+                    color: $fontcolor;
+                    font-size: 1.5rem;
+                }
+
+                .miniStar{
+                    position: relative;
+                    width: 144px;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        position: absolute;
+                        right: 0;
+                        width: 80px;
+                        z-index: -1;
+                    }
+                }
+    
+                .playnow {
+                    position: relative;
+                    height: 300px;
+                    width: 300px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    // .playStar{
+                    // }
+    
+                    a{
+                        text-decoration: none;
+                        font-size: 3rem;
+                        position: absolute;
+                        color: $contrastcolor;
+                        -webkit-text-stroke: 4px;
+                        -webkit-text-stroke-color: black;
+                        width: 50%;
+                        @include FontShadow;
+                    }
+                }
+            }
+            
+            .header-clouds{
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
