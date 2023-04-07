@@ -170,11 +170,60 @@ $darkerblue: #131212;
         }
     }
 
+    main{
+        margin: 40rem 0;
+        
+
+        h1{
+            color: $fontcolor;
+            @include Minnie();
+            @include FontShadow;
+        }
+
+        .CloudContainer {
+            position: relative;
+            display: flex;
+            align-items: center;
+            
+            .container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+                .WordContainer{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 50%;
+                    
+                    h1 {
+                        font-size: 2rem;
+                    }
+                    
+                    p {
+                        color: white;
+                        font-size: 1rem;
+                        width: 80%;
+                        text-align: center;
+                        padding: 1rem 0;
+                    }
+                }
+            }
+            
+            .clouds2{
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+            }
+        }
+    }
+
     footer{
         display: flex;
         flex-direction: column;
         padding-top: 4rem;
-        
+
         .starhopping {
             position: relative;
             display: flex;
@@ -200,8 +249,6 @@ $darkerblue: #131212;
         h3, .socials, .footerNav, p{
             padding: 3rem 0;
         }
-
-      
 
         .container {
             .socials{

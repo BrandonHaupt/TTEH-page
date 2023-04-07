@@ -22,10 +22,10 @@ export default function Footer(){
 
                 <div className="socials">
                     <img src={DiscordSocial} alt="Discord" />
-                    <img src={FacebookSocial} alt="Discord" />
-                    <img src={InstagramSocial} alt="Discord" />
-                    <img src={TwitterSocial} alt="Discord" />
-                    <img src={YoutubeSocial} alt="Discord" />
+                    <img src={FacebookSocial} alt="Facebook" />
+                    <img src={InstagramSocial} alt="Instrgram" />
+                    <img src={TwitterSocial} alt="Twitter" />
+                    <img src={YoutubeSocial} alt="Youtube" />
                 </div>
 
                 <div className="footerNav">
