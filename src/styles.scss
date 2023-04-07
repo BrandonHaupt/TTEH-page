@@ -128,7 +128,7 @@ $darkerblue: #131212;
                     width: 144px;
                     display: flex;
                     align-items: center;
-
+            
                     img {
                         position: absolute;
                         right: 0;
@@ -167,6 +167,83 @@ $darkerblue: #131212;
                 width: 100%;
                 height: auto;
             }
+        }
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 4rem;
+        
+        .starhopping {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                position: absolute;
+                z-index: -1;
+            }
+        }
+
+
+        h3{
+            text-align: center;
+            color: $fontcolor;
+            @include Minnie();
+            @include FontShadow;
+            font-size: 1.3rem;
+            padding-bottom: 2rem !important;
+        }
+
+        h3, .socials, .footerNav, p{
+            padding: 3rem 0;
+        }
+
+      
+
+        .container {
+            .socials{
+                display: flex;
+                justify-content: center;
+                img{
+                    padding: 0 3rem;
+                }
+            }
+
+            .footerNav{
+                display: flex;
+                justify-content: space-evenly;
+                @include Minnie();
+                @include FontShadow;
+
+                a {
+                    color: $fontcolor;
+                }
+
+                //* Star position 
+                .miniStar{
+                    position: relative;
+                    width: 144px;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        position: absolute;
+                        right: 0;
+                        width: 80px;
+                        z-index: -1;
+                    }
+                }
+
+            }
+
+        }
+
+        p {
+            color:white;
+            text-align: center;
         }
     }
 }

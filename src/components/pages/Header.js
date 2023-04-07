@@ -27,15 +27,15 @@ export default function Header(){
                     
                     <div className='playnow'>
                         <a href="#">Play Now!</a>
-                        <img className='playStar' src={PlayStar}/>
+                        <img className='playStar' src={PlayStar} alt='a star'/>
                     </div>
                     
                     <a className='miniStar' href="#">
-                        <img src={MiniStar} />
+                        <img src={MiniStar} alt='a mini star'/>
                         Login/Sign up
                     </a>
                     <a className='miniStar' href="#">
-                        <img src={MiniStar} />
+                        <img src={MiniStar} alt='a mini star'/>
                         Help
                     </a>
                 </nav>
