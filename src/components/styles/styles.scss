@@ -63,8 +63,8 @@ img, picture, svg, video {
 
 body {
     min-height: 100%;
-    background: url('../pages/img/Wallpaper_Test_2_32523.jpg');
-    background-position: center;
+    background: url('../pages/img/Wallpaper_Test_2_32523.jpg') center;
+    // background-position: center;
     background-size: cover;
     background-attachment: fixed;
     // filter: brightness(50%);
@@ -101,11 +101,21 @@ body {
             align-items: center;
 
             nav {
+                // display: flex;
+                // justify-content: space-around;
+                // align-items: center;
+                display: grid; 
+                grid-template-columns: 1fr 1fr 0.8fr 0.5fr 1.5fr 1.3fr; 
+                grid-template-rows: 1fr; 
+                gap: 0px 0px; 
+                grid-template-areas: 
+                  "History Comics Art Play-Now login\/sign-up Help"; 
+                justify-items: center; 
+                align-items: center; 
+
+
                 width: 100%;
                 position: relative;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
                 gap: 2px;
                 // background: url('./components/pages/img/Header-clouds.png') no-repeat;
                 @include Minnie();
