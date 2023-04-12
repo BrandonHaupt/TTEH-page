@@ -1,4 +1,5 @@
 @use "sass:math";
+@import "colors.scss";
 
 // ############################################
 // ################ Font stuff ################
@@ -6,12 +7,12 @@
 
 @font-face {
     font-family: 'Minnie';
-    src: url('./components/fonts/Minnie.TTF');
+    src: url('../fonts/Minnie.TTF');
 }
 
 @font-face {
     font-family: 'Impress';
-    src: url('./components/fonts/impress-bt.ttf');
+    src: url('../fonts/impress-bt.ttf');
 }
 
 @mixin Minnie {
@@ -62,19 +63,14 @@ img, picture, svg, video {
 
 body {
     min-height: 100%;
-    background: url('./components/pages/img/Wallpaper_Test_2_32523.jpg');
+    background: url('../pages/img/Wallpaper_Test_2_32523.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     // filter: brightness(50%);
 }
 
-$starcolor: #f7e1a8;
-$fontcolor: #edc36e;
-$contrastcolor: #ea8e93;
-$blue: #3a4387;
-$darkblue: #1b254b;
-$darkerblue: #131212;
+
 
 
 // ############################################
