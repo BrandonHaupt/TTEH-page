@@ -101,9 +101,6 @@ body {
             align-items: center;
 
             nav {
-                // display: flex;
-                // justify-content: space-around;
-                // align-items: center;
                 display: grid; 
                 grid-template-columns: 1fr 1fr 0.8fr 0.5fr 1.5fr 1.3fr; 
                 grid-template-rows: 1fr; 
@@ -117,7 +114,6 @@ body {
                 width: 100%;
                 position: relative;
                 gap: 2px;
-                // background: url('./components/pages/img/Header-clouds.png') no-repeat;
                 @include Minnie();
                 @include FontShadow;
         
