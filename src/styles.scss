@@ -61,8 +61,11 @@ img, picture, svg, video {
 }
 
 body {
-    min-height: 100vh;
+    min-height: 100%;
     background: url('./components/pages/img/Wallpaper_Test_2_32523.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     // filter: brightness(50%);
 }
 
@@ -78,9 +81,9 @@ $darkerblue: #131212;
 // ############## Mobile Stuff ################
 // ############################################
 
-.App {
+// .App {
 
-}
+// }
 
 // ############################################
 // ########## Responsive Stuff ################
