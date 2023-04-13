@@ -1,6 +1,36 @@
+@use "sass:math";
+
+
+// ############################################
+// ############### Color Stuff ###############
+// ############################################
+
 $starcolor: #f7e1a8;
 $fontcolor: #edc36e;
 $contrastcolor: #ea8e93;
 $blue: #3a4387;
 $darkblue: #1b254b;
 $darkerblue: #131212;
+
+
+
+// ############################################
+// ############### Shadow Stuff ###############
+// ############################################
+
+
+@function outline($color, $shadow-width, $x-shift: 0, $y-shift: 0, $probe-count: 36) {
+    $shadows: ();
+    @for $i from 1 through $probe-count {
+      $angle: $i * 360deg / $probe-count;
+      $offset-x: math.sin($angle) * $shadow-width + $x-shift;
+      $offset-y: math.cos($angle) * $shadow-width + $y-shift;
+      $shadows-append: #{$offset-x} #{$offset-y} 1px #{$color};
+      $shadows: append($shadows, $shadows-append, comma);
+    }
+    @return $shadows;
+}
+  
+@mixin FontShadow {
+      text-shadow: append(outline(black, 3px, 0, 2px), outline(white, 6px, 0, 2px), comma);
+}
