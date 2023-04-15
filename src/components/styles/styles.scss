@@ -303,7 +303,7 @@ header {
     }
 
     main{
-        margin: 40rem 0;
+        margin: 20rem 0;
         
 
         h1{
@@ -312,7 +312,11 @@ header {
             @include FontShadow;
         }
 
-        .CloudContainer {
+        section{
+            margin: 20rem 0;
+        }
+
+        .CloudContainer, .JoinTeamContianer {
             position: relative;
             display: flex;
             align-items: center;
@@ -421,6 +425,7 @@ header {
         }
 
         p {
+            background-color: rgba($color: #131313, $alpha: .8);
             color:white;
             text-align: center;
         }
