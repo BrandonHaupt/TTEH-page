@@ -30,8 +30,8 @@ export default function Footer(){
 
                 <div className="footerNav">
                     <a className='miniStar' href="#">
-                            <img src={MiniStar} />
-                            Join The Team
+                        <img src={MiniStar} />
+                        Join The Team
                     </a>
                         
                     <a className='miniStar' href="#">

@@ -1,5 +1,5 @@
 import Logo from './img/game-logo.png'
-import HeaderCloud from "./img/Header-clouds.png"
+import HeaderCloud2 from "./img/Header-clouds.svg"
 import PlayStar from "./img/Play_Now_Star.svg"
 import MiniStar from './img/Mini_Star.svg'
 
@@ -30,7 +30,7 @@ export default function Header(){
                     <span className="line"></span>
                 </span>
 
-                <img className='header-clouds' src={HeaderCloud} alt='space clouds'/>
+                <img className='header-clouds' src={HeaderCloud2} alt='space clouds'/>
 
                 <div className="animatedImages">
                     <img src={PieImage} alt="" />
