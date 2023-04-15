@@ -281,11 +281,23 @@ header {
                 }
             }
             
-            .header-clouds{
+            .header-clouds, .animatedImages{
                 position: absolute;
                 display: block;
                 width: 100%;
                 height: auto;
+            }
+
+            .animatedImages{
+                display: flex;
+                justify-content: flex-end;
+                top: 50px;
+                right: 50px;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                }
             }
         }
     }

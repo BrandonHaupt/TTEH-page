@@ -3,6 +3,12 @@ import HeaderCloud from "./img/Header-clouds.png"
 import PlayStar from "./img/Play_Now_Star.svg"
 import MiniStar from './img/Mini_Star.svg'
 
+import CaneImage from "./img/header-images/Cane-image.png"
+import DropButton from "./img/header-images/Drop-button-image.png"
+import PieImage from "./img/header-images/Pie-Image.png"
+import PlantDrop from "./img/header-images/Plant-drop-image.png"
+import SheepPerson from "./img/header-images/Sheep-person-image.png"
+
 import { useState } from "react"
 
 
@@ -11,26 +17,8 @@ import { useState } from "react"
 
 export default function Header(){
 
-    // const opened = useRef();
-
-    // console.log(opened)
-
     const [isActive, setIsActive] = useState(false);
 
-    
-    // function activeNarBar() {
-    //     console.log("start")
-        
-    //     // if (opened === "active") {
-    //     //     opened.current.classList.remove("active");
-    //     //     console.log("removed active class");
-    //     // } else {
-    //     //     opened.current.classList.add("active");
-    //     //     console.log("added active class");
-    //     // }
-  
-    //     console.log("end")
-    // } 
 
     return(
         <header>
@@ -43,6 +31,14 @@ export default function Header(){
                 </span>
 
                 <img className='header-clouds' src={HeaderCloud} alt='space clouds'/>
+
+                <div className="animatedImages">
+                    <img src={PieImage} alt="" />
+                    <img src={CaneImage} alt="" />
+                    <img src={SheepPerson} alt="" />
+                    <img src={DropButton} alt="" />
+                    <img src={PlantDrop} alt="" />
+                </div>
 
                 <nav>
                     <a className='miniStar' href="#">
