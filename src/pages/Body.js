@@ -1,6 +1,7 @@
 import Clouds2 from "./img/body-image/Clouds-2.png"
 import ToonFight1 from "./img/body-image/ToonFight1.png"
 
+
 export default function Body(){
     return(
         <main>
@@ -66,6 +67,7 @@ export default function Body(){
                 <img className='clouds2' src={Clouds2} alt="Clouds"/>
             </section>
 
+           
         </main>
     )
 }

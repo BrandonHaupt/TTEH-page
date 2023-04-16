@@ -9,27 +9,34 @@ import PieImage from "./img/header-images/Pie-Image.png"
 import PlantDrop from "./img/header-images/Plant-drop-image.png"
 import SheepPerson from "./img/header-images/Sheep-person-image.png"
 
-import { useState } from "react"
-
+// import { useState } from "react"
 
 // const opened = document.getElementById("active");
 
 
 export default function Header(){
 
-    const [isActive, setIsActive] = useState(false);
+    // const [isActive, setIsActive] = useState(false);
 
 
     return(
         <header>
-            <img className='site-logo' src={Logo} alt='toontowns event horizon logo'/>
-            <div className='nav'  id={isActive ? 'active' : ''} onClick={() => setIsActive(!isActive)}>
+            <div className="SiteLogo">
+                <a href="/">
+                    <img className='logo' src={Logo} alt='toontowns event horizon logo'/>
+                </a>
+            </div>
+            
+
+
+            <div className='nav'>
+                {/* id={isActive ? 'active' : ''} onClick={() => setIsActive(!isActive)}  */}
                 <span className="hamburger-lines">
                     <span className="line"></span>
                     <span className="line"></span>
                     <span className="line"></span>
                 </span>
-
+                
                 <img className='header-clouds' src={HeaderCloud2} alt='space clouds'/>
 
                 <div className="animatedImages">
@@ -40,44 +47,42 @@ export default function Header(){
                     <img src={PlantDrop} alt="" />
                 </div>
 
+
                 <nav>
-                    <a className='miniStar' href="#">
-                        <img src={MiniStar} />
+
+                    <a className='miniStar' href="/history">
+                        <img src={MiniStar} alt='a mini star'/>
                         History
                     </a>
                     
-                    <a className='miniStar' href="#">
-                        <img src={MiniStar} />
+                    <a className='miniStar' href="/comic">
+                        <img src={MiniStar} alt='a mini star'/>
                         Comics
                     </a>
 
-                    <a className='miniStar' href="#">
-                        <img src={MiniStar} />
+                    <a className='miniStar' href='/artwork'>
+                        <img src={MiniStar} alt='a mini star'/>
                         Artwork
                     </a>
                     
                     <div className='playnow'>
-                        <a href="#">Play Now!</a>
+                        <a href='/#'>Play Now!</a>
                         <img className='playStar' src={PlayStar} alt='a star'/>
                     </div>
                     
-                    <a className='miniStar' href="#">
+                    <a className='miniStar' href='/login'>
                         <img src={MiniStar} alt='a mini star'/>
                         Login/Sign up
                     </a>
-                    <a className='miniStar' href="#">
+
+                    <a className='miniStar' href='/help'>
                         <img src={MiniStar} alt='a mini star'/>
                         Help
                     </a>
-
-
-                    
-
                 </nav>
-            </div>
-            
 
-           
+            </div>
+          
         </header>
     )
 }

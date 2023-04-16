@@ -1,15 +1,17 @@
-import './components/styles/styles.scss'
-// import { Outlet } from 'react-router-dom';
-import Header from './components/pages/Header';
-import Body from './components/pages/Body';
-import Footer from './components/pages/Footer';
+import './pages/styles/styles.scss'
+import Header from './pages/Header';
+import Body from './pages/Body';
+import Footer from './pages/Footer';
+import { Outlet } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      {/* <Header/>
       <Body/>
-      <Footer/>
+      <Footer/> */}
+      <Outlet/>
     </div>
   );
 }
